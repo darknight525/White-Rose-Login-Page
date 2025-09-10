@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glassmorphism Login & Register & Forgot Password</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <!-- Login Form -->
+    <form class="glass-login-form" id="loginForm" autocomplete="off">
+      <h2>Login</h2>
+      <div class="input-group space-tight">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your username" />
+        <span class="error-message" id="loginUsernameErrorMsg"></span>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" />
+        <span class="error-message" id="loginPasswordErrorMsg"></span>
+      </div>
+      <div class="options">
+        <label class="remember">
+          <input type="checkbox" id="remember" />
+          Remember me
+        </label>
+        <a href="#" class="forgot" id="showForgotPassword">Forgot Password</a>
+      </div>
+      <button class="login-btn bolder-text" type="submit">Login</button>
+      <div class="register bright-register">
+        Don't have an account? <a href="#" id="showSignUp">Register</a>
+      </div>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form class="glass-signup-form" id="signUpForm" autocomplete="off" style="display:none;">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <label for="registerUsername">Username</label>
+        <input type="text" id="registerUsername" name="registerUsername" required placeholder="Create a username" />
+        <span id="registerUsernameHint" class="username-hint">
+          Username must be at least 12 characters (14+ preferred), including uppercase, lowercase, numbers, and symbols.
+        </span>
+        <span class="error-message" id="registerUsernameError"></span>
+      </div>
+      <div class="input-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required placeholder="Enter your first name" />
+      </div>
+      <div class="input-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" required placeholder="Enter your last name" />
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="Enter your email" />
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required placeholder="Enter your phone number" />
+      </div>
+      <div class="input-group">
+        <label for="registerPassword">Password</label>
+        <input id="registerPassword" name="registerPassword" type="password" required placeholder="Create a password" />
+      </div>
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" required placeholder="Confirm password" />
+        <span class="error-message" id="signUpErrorMsg"></span>
+      </div>
+      <button class="login-btn bolder-text" type="submit">Sign Up</button>
+      <div class="register bright-register">
+        Already have an account? <a href="#" id="backToLogin">Login</a>
+      </div>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form class="glass-forgotpass-form" id="forgotPasswordForm" autocomplete="off" style="display:none;">
+      <h2>Reset Password</h2>
+      <div class="input-group">
+        <label for="newPassword">New Password</label>
+        <input id="newPassword" name="newPassword" type="password" required placeholder="Enter new password" />
+      </div>
+      <div class="input-group">
+        <label for="confirmNewPassword">Confirm Password</label>
+        <input id="confirmNewPassword" name="confirmNewPassword" type="password" required placeholder="Confirm new password" />
+        <span class="error-message" id="resetErrorMsg"></span>
+      </div>
+      <button class="login-btn bolder-text" type="submit">Submit</button>
+      <div class="register bright-register">
+        Remembered your password? <a href="#" id="backToLoginFromForgot">Login</a>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
